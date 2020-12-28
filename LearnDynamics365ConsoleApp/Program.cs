@@ -22,7 +22,7 @@ namespace LearnDynamics365ConsoleApp
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             ILog _Log = LogManager.GetLogger("LOGGER");
 
-            var connectionString = MyOptions.connectionString;
+            var connectionString = $@"AuthType=OAuth;Url=https://homertrialtest.api.crm4.dynamics.com/;"+ MyOptions.login + MyOptions.password +"AppId=51f81489-12ee-4a9e-aaae-a2591f45987d;RedirectUri=app://58145B91-0C36-4500-8554-080854F2AC97;"; 
 
             Service = new CrmServiceClient(connectionString);
 
